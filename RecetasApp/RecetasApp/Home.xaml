@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecetasApp.Home"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <StackLayout Spacing="10" >
+        <Label HeightRequest="60"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Home Recetas" 
+                          BackgroundColor="blue"
+                          TextColor="White" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+     <Label x:Name="text" Text="Buscar"/>
+
+    <Entry  x:Name="txtBuscarReceta"
+            Margin="20,40,20,0"
+            Placeholder="Nombre de la Receta"/>
+    <Button x:Name="btnBuscar"
+                        Text="Buscar"
+                         Clicked="btnBuscar_Clicked"/>
+
+
+
+
+
+
+
+        <ListView x:Name="MyListView" HasUnevenRows="True" ItemSelected="OnItemSelected">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+
+                            <StackLayout>
+                                
+
+                                <Label>
+                                    <Label.FormattedText >
+                                        <FormattedString >
+                                            <Span Text="{Binding name}"/>
+                                            
+                                            
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+         <Grid  Margin="10"  Padding="0"  VerticalOptions="Start">
+            <Grid.ColumnDefinitions ></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions  ></Grid.RowDefinitions>
+
+            
+            <Button Grid.Row="0" Grid.Column="1"
+                x:Name="btnPerfil" HeightRequest="100"
+                        Text="Perfil"
+                         Clicked="btnPerfil_Clicked"/>
+            <Button Grid.Row="0" Grid.Column="2"
+                x:Name="btnIngredientes"
+                        Text="Ingredientes"
+                         Clicked="btnIngredientes_Clicked"/>
+            
+            
+            </Grid>
+
+
+            
+            </StackLayout>
+</ContentPage>

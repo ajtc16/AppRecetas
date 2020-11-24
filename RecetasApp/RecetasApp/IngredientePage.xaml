@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecetasApp.IngredientePage"
+               NavigationPage.HasNavigationBar="True"  >
+
+
+        <ContentPage.Content>
+
+        <StackLayout Spacing="10">
+            <Label
+                 x:Name="lblUsuario"
+                 HeightRequest="60"  
+                 HorizontalOptions="FillAndExpand" 
+                 Text="Ingredientes" 
+                 BackgroundColor="blue"
+                 TextColor="White" 
+                 FontSize="20" 
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"/>
+
+            <ListView x:Name="MyListView" HasUnevenRows="True">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout>
+
+                                <Entry x:Name="txtName" Text="{Binding name}"></Entry>
+                                
+                                <Entry x:Name="txtUnit" Text="{Binding unit}"></Entry>
+
+
+                                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" CommandParameter="{Binding .}"/>
+                                
+                            </StackLayout>
+
+
+
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+            <Label x:Name="texto" Text="Crear Nuevo Ingrediente"/>
+
+            <Entry x:Name="txtNewName" Placeholder="Ingrese el nombre del Ingrediente"></Entry>
+            <Entry x:Name="txtNewUnit" Placeholder="Ingrese la unidad del Ingediente"></Entry>
+            
+
+            <Button x:Name="btnCrear" Text="Crear Ingrediente" Clicked="btnCrear_Clicked" />
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

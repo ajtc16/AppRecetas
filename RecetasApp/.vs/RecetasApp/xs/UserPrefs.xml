@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{274BBB44-5453-465A-B98E-C5E0988D64D1}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="RecetasApp/IngredientePage.xaml.cs" Line="73" Column="16" />
+      <File FileName="RecetasApp/Login.xaml.cs" />
+      <File FileName="RecetasApp/LoginFB.xaml.cs" Line="23" Column="31" />
+      <File FileName="RecetasApp/Modelo/FacebookProfile.cs" />
+      <File FileName="RecetasApp/Modelo/Picture.cs" />
+      <File FileName="RecetasApp/Modelo/Data.cs" />
+      <File FileName="RecetasApp/Login.xaml" />
+      <File FileName="RecetasApp/Home.xaml" Line="48" Column="45" />
+      <File FileName="RecetasApp/Modelo/Register.xaml" Line="1" Column="1" />
+      <File FileName="RecetasApp/Register.xaml.cs" Line="35" Column="71" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RecetasApp" expanded="True">
+            <Node name="RecetasApp" expanded="True">
+              <Node name="Home.xaml" expanded="True" />
+              <Node name="IngredientePage.xaml" expanded="True" />
+              <Node name="LoginFB.xaml" expanded="True">
+                <Node name="LoginFB.xaml.cs" selected="True" />
+              </Node>
+              <Node name="Register.xaml" expanded="True" />
+            </Node>
+            <Node name="RecetasApp.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RecetasApp.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" TriggeredFromHotReload="False" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.FacebookClient" Version="2.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Perfil.xaml.cs">
+      <DependentUpon>Perfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="IngredientePage.xaml.cs">
+      <DependentUpon>IngredientePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="LoginFB.xaml.cs">
+      <DependentUpon>LoginFB.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

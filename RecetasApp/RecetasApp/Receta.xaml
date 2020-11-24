@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecetasApp.Receta"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Spacing="10" >
+        <Label HeightRequest="60"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Detalle Receta" 
+                          BackgroundColor="blue"
+                          TextColor="White" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+     
+
+        <Grid  Margin="20"  Padding="0"  VerticalOptions="Start">
+            <Grid.ColumnDefinitions ></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions  ></Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre de la Receta:"></Label>
+            <Label Grid.Row="0" Grid.Column="1" x:Name="txtNombreReceta"></Label>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Nivel de Dificultad:"></Label>
+            <Label Grid.Row="1" Grid.Column="1" x:Name="txtSkillReceta"  ></Label>
+
+            <Label Grid.Row="2" Grid.Column="0"  x:Name="txtIngredientes" Text="INGREDIENTES"></Label>
+
+
+            <ListView Grid.Row="3" Grid.Column="0" x:Name="MyListViewIngredientes" HasUnevenRows="True"
+                      HeightRequest="30">
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell >
+
+
+                            <StackLayout>
+                                
+
+                                <Label>
+                                    <Label.FormattedText >
+                                        <FormattedString >
+                                            <Span Text="{Binding name}"/>
+                                         
+                                            
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        <Label Grid.Row="4" Grid.Column="0" x:Name="txtPasos" Text="PASOS PREPARACION"></Label>
+
+        <ListView Grid.Row="5" Grid.Column="0" x:Name="MyListViewPasos" HasUnevenRows="True" >
+
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+
+
+                            <StackLayout>
+                              <Label x:Name="lblNombre" Text="{Binding text}"></Label>
+                                
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </Grid>
+
+        <Grid  Margin="10"  Padding="0"  VerticalOptions="Start">
+            <Grid.ColumnDefinitions ></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions  ></Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0"
+                x:Name="btnInicio" HeightRequest="100"
+                        Text="Inicio"
+                         Clicked="btnInicio_Clicked"/>
+            <Button Grid.Row="0" Grid.Column="1"
+                x:Name="btnPerfil"
+                        Text="Perfil"
+                         Clicked="btnPerfil_Clicked"/>
+            <Button Grid.Row="0" Grid.Column="2"
+                x:Name="btnIngredientes"
+                        Text="Ingredientes"
+                         Clicked="btnIngredientes_Clicked"/>
+            
+            
+            </Grid>
+
+            </StackLayout>
+
+</ContentPage>

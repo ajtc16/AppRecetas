@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecetasApp.Login"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout Spacing="10" >
+                  <Image Source="logoU.png"></Image>
+                   <Label HeightRequest="60"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Login Usuario" 
+                          BackgroundColor="blue"
+                          TextColor="White" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+                
+                 <Entry  x:Name="txtUsuario"
+                         Margin="20,40,20,0"
+                         Placeholder="Usuario">
+                   
+                 </Entry>
+                
+                 <Entry x:Name="txtPassword"
+                        Margin="20,0,20,0" 
+                        IsPassword="true"
+                        Placeholder="Password">
+                    
+                 </Entry>
+                
+                 <Button x:Name="btnLogin"
+                        Text="Ingresar"
+                         Clicked="btnLogin_Clicked"
+
+                         />
+                <Button x:Name="btnRegister"
+                        Text="Registro"
+                         Clicked="btnRegister_Clicked"
+
+                         />
+        <Button x:Name="btnFacebook"
+                        Text="Facebook"
+                         Clicked="btnFacebook_Clicked"
+
+                         />
+                 
+            </StackLayout>
+</ContentPage>

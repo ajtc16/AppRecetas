@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RecetasApp.LoginFB">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Image x:Name="imgPic" HeightRequest="200" MinimumWidthRequest="200"></Image>
+            <Label x:Name="Name"></Label>
+            <Label x:Name="Email"></Label>
+
+            <Button x:Name="btnLoginFb"
+                    Text="Login with FAcebook"
+                    Clicked="btnLoginFb_Clicked" ></Button>
+            <WebView x:Name="webView" HeightRequest="10" WidthRequest="10"
+                    VerticalOptions="FillAndExpand" >
+
+
+            </WebView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecetasApp.Register"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+             <Label
+                 x:Name="lblUsuario"
+                 HeightRequest="60"  
+                 HorizontalOptions="FillAndExpand" 
+                 Text="Registrar nuevo Usuario" 
+                 BackgroundColor="blue"
+                 TextColor="White" 
+                 FontSize="20" 
+                 HorizontalTextAlignment="Center"
+                 VerticalTextAlignment="Center"/>
+
+
+        <Grid Margin="20,20,20,20" BackgroundColor="AntiqueWhite">
+            <Grid.ColumnDefinitions></Grid.ColumnDefinitions>
+            <Grid.RowDefinitions></Grid.RowDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre:"></Label>
+            <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNombre" Placeholder="Ingrese su Nombre"></Entry>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Apellido:"></Label>
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="txtApellido" Placeholder="Ingrese su Apellido"></Entry>
+
+         
+            <Label Grid.Row="2" Grid.Column="0" Text="Mail:"></Label>
+            <Entry Grid.Row="2" Grid.Column="1" x:Name="txtMail" Placeholder="Ingrese su Mail"></Entry>
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Nombre Usuario:"></Label>
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="txtUsuario" Placeholder="Ingrese su Usuario"></Entry>
+            
+            <Label Grid.Row="4" Grid.Column="0" Text="Usuario Contraseña:"></Label>
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="txtUsuarioPassword" Placeholder="Ingrese su Contraseña"></Entry>
+
+            <Button Grid.Row="5" Grid.Column="0" x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"></Button>       
+            <Button Grid.Row="5" Grid.Column="1" x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked"></Button>
+        </Grid>
+
+        </StackLayout>
+</ContentPage>
